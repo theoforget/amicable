@@ -53,6 +53,10 @@
         {
             var first = document.getElementById("num1").value;
             var second = document.getElementById("num2").value;
+            if (first == "" || second == "") {
+                alert("Empty Input!");
+                return;
+            }
             var first_factors = [], second_factors = [];
             var first_factor_sum = 0, second_factor_sum = 0;
             for (n = 1; n < first; n++) {
