@@ -46,9 +46,7 @@
         <button class="button" onclick="checkAmicable()" style="font-size:40px">
             CHECK
         </button>
-        <div class="box" id="result">
-            Try it out!
-        </div>
+        <div id="result"></div>
     </center>
     <script type="text/javascript">
         function checkAmicable()
@@ -76,13 +74,12 @@
             for (i=0; i < second_factors.length - 1; i++)
                 diagnostics += second_factors[i] + ", ";
             diagnostics += second_factors[second_factors.length - 1] + "] = " + second_factor_sum;
-            
-            var message = "The numbers: " + first + " and " + second;
+            var message = "<div class='box'> The numbers: " + first + " and " + second;
             if (first_factor_sum == second && second_factor_sum == first) {
-                message += " are amicable";
+                message += " are amicable</div>";
                 alert(diagnostics);
             } else
-                message += " are not amicable";
+                message += " are not amicable</div>";
             document.getElementById("result").innerHTML = message;
         }
     </script>
